@@ -1,2 +1,2 @@
-import BgTop from './BgTop.png';
-export {BgTop};
+import LogoTraveloka from './Logo-Traveloka.png';
+export {LogoTraveloka};

@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, TextInput, TouchableOpacity, View} from 'react-native';
-import {colors, fonts, hp, wp} from '../../../constants';
+import {colors, hp, wp} from '../../../constants';
 
 const Input = ({
   placeholder,
@@ -10,7 +10,6 @@ const Input = ({
   multiline,
   colorText,
   fontSize,
-  fontFamily,
   widthInput,
   maxLength,
   suffixComponent,
@@ -36,7 +35,7 @@ const Input = ({
         onPress={onPress}>
         {suffixComponent && suffixComponent}
         <TextInput
-          style={styles.input(colorText, fontSize, fontFamily, widthInput)}
+          style={styles.input(colorText, fontSize, widthInput)}
           placeholder={placeholder}
           value={value}
           onChangeText={onChangeText}
@@ -62,11 +61,11 @@ const Input = ({
       )}>
       {suffixComponent && suffixComponent}
       <TextInput
-        style={styles.input(colorText, fontSize, fontFamily, widthInput)}
+        style={styles.input(colorText, fontSize, widthInput)}
         placeholder={placeholder}
         value={value}
         onChangeText={onChangeText}
-        placeholderTextColor={colors.text.placeholder}
+        placeholderTextColor={colors.text.grayMuda}
         keyboardType={keyboardType}
         multiline={multiline}
         numberOfLines={5}
@@ -94,15 +93,13 @@ const styles = StyleSheet.create({
     backgroundColor: backgroundColor,
     borderRadius: borderRadius,
   }),
-  input: (colorText, fontSize, fontFamily, widthInput) => ({
+  input: (colorText, fontSize, widthInput) => ({
     fontSize: fontSize ? fontSize : hp(2),
-    fontFamily: fontFamily ? fontFamily : fonts.MontserratRegular,
     color: colorText ? colorText : colors.text.placeholder,
     width: widthInput,
   }),
   lengthText: {
     fontSize: hp(1.5),
-    fontFamily: fonts.MontserratBold,
     color: colors.text.silver,
     top: hp(1),
   },

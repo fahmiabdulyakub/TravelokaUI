@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {ICTitik, ICPindai} from '../../assets';
 import {Gap, Header} from '../../components';
-import {colors, fonts, hp, wp} from '../../constants';
+import {colors, hp, wp} from '../../constants';
 
 export const Awal = ({navigation}) => {
   return (
@@ -47,9 +47,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   textBold: {
-    fontFamily: fonts.MontserratBold,
     color: colors.text.gray,
     fontSize: hp(2),
+    fontWeight: 'bold',
   },
   circle: {
     backgroundColor: colors.bg.abu,
@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textSmall: {
-    fontFamily: fonts.MontserratMedium,
     color: colors.text.grayMuda,
     fontSize: hp(1.5),
   },

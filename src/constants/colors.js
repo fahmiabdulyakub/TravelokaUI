@@ -3,7 +3,7 @@ const mainColor = {
   black: 'black',
   blue: '#2D9CDB',
   blue3: '#56CCF2',
-  blue2: '#0AACDD',
+  blue2: '#1BA0E2',
   yello: '#FAD70F',
   alto: '#DCDCDC',
   silver: '#BDBDBD',
