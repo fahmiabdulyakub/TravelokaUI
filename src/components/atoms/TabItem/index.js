@@ -38,7 +38,7 @@ const TabItem = ({title, active, onPress, onLongPress}) => {
     <TouchableOpacity
       onPress={onPress}
       onLongPress={onLongPress}
-      style={styles.container(active)}>
+      style={styles.container}>
       <Icon />
       <Text style={styles.text(active)}>{title}</Text>
     </TouchableOpacity>
@@ -48,7 +48,7 @@ const TabItem = ({title, active, onPress, onLongPress}) => {
 export default TabItem;
 
 const styles = StyleSheet.create({
-  container: active => ({
+  container: {
     alignItems: 'center',
     backgroundColor: colors.bg.white,
     flex: 1,
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     shadowRadius: 7.49,
 
     elevation: 12,
-  }),
+  },
   text: active => ({
     fontSize: hp(1.5),
     color: active ? colors.text.blue2 : colors.text.grayMuda,

@@ -4,7 +4,7 @@ import {ICTitik} from '../../assets';
 import {Header} from '../../components';
 import {colors} from '../../constants';
 
-const Simpan = navigation => {
+export const Simpan = navigation => {
   return (
     <View style={styles.page}>
       <Header
@@ -14,8 +14,6 @@ const Simpan = navigation => {
     </View>
   );
 };
-
-export default Simpan;
 
 const styles = StyleSheet.create({
   page: {

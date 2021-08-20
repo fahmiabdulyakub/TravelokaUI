@@ -4,7 +4,7 @@ import {ICReceipt} from '../../assets';
 import {Header} from '../../components';
 import {colors} from '../../constants';
 
-const Pesanan = () => {
+export const Pesanan = () => {
   return (
     <View style={styles.page}>
       <Header
@@ -14,8 +14,6 @@ const Pesanan = () => {
     </View>
   );
 };
-
-export default Pesanan;
 
 const styles = StyleSheet.create({
   page: {

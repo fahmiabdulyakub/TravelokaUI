@@ -4,7 +4,7 @@ import {ICTitik, ICPindai} from '../../assets';
 import {Gap, Header} from '../../components';
 import {colors, fonts, hp, wp} from '../../constants';
 
-const Awal = ({navigation}) => {
+export const Awal = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Header
@@ -33,8 +33,6 @@ const Awal = ({navigation}) => {
     </View>
   );
 };
-
-export default Awal;
 
 const styles = StyleSheet.create({
   page: {
