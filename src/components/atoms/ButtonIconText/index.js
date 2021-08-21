@@ -22,6 +22,8 @@ const ButtonIconText = ({
   disabled,
   shadow,
   fontWeight,
+  justifyContent,
+  fontSize,
 }) => {
   return (
     <TouchableOpacity
@@ -34,6 +36,7 @@ const ButtonIconText = ({
         marginHorizontal,
         height,
         shadow,
+        justifyContent,
       )}
       onPress={onPress}
       disabled={disabled}>
@@ -46,6 +49,7 @@ const ButtonIconText = ({
           widthText,
           leftText,
           fontWeight,
+          fontSize,
         )}>
         {title}
       </Text>
@@ -67,6 +71,7 @@ const styles = StyleSheet.create({
     marginHorizontal,
     height,
     shadow,
+    justifyContent,
   ) => ({
     backgroundColor: backgroundColor ? backgroundColor : colors.white,
     paddingVertical: height
@@ -79,7 +84,7 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius ? borderRadius : 8,
     flexDirection: flexDirection ? flexDirection : 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: justifyContent ? justifyContent : 'space-between',
     marginHorizontal: marginHorizontal,
     shadowColor: shadow && '#000',
     shadowOffset: shadow && {
@@ -91,8 +96,15 @@ const styles = StyleSheet.create({
 
     elevation: shadow && 5,
   }),
-  title: (titleColor, textAlign, widthText, leftText, fontWeight) => ({
-    fontSize: hp(1.5),
+  title: (
+    titleColor,
+    textAlign,
+    widthText,
+    leftText,
+    fontWeight,
+    fontSize,
+  ) => ({
+    fontSize: fontSize ? fontSize : hp(1.5),
     color: titleColor ? titleColor : colors.white,
     width: widthText ? widthText : null,
     left: leftText ? leftText : null,

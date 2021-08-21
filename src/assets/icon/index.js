@@ -26,6 +26,13 @@ import ICTrain from './ICTrain.svg';
 import ICPayLater from './ICPayLater.svg';
 import ICWallet from './ICWallet.svg';
 import ICVilla from './ICVilla.svg';
+import ICFinansial from './ICFinansial.svg';
+import ICAllProduct from './ICAllProduct.svg';
+import ICAntarJemput from './ICAnterJemput.svg';
+import ICKesehatan from './ICKesehatan.svg';
+import ICAsuransi from './ICAsuransi.svg';
+import ICPulsa from './ICPulsa.svg';
+import ICVoucher from './ICVoucher.svg';
 
 export {
   ICEmail,
@@ -56,4 +63,11 @@ export {
   ICTrain,
   ICWallet,
   ICVilla,
+  ICFinansial,
+  ICAllProduct,
+  ICAntarJemput,
+  ICAsuransi,
+  ICKesehatan,
+  ICPulsa,
+  ICVoucher,
 };

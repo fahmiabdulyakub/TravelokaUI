@@ -20,6 +20,7 @@ export const colors = {
   grayMuda: '#687176',
   purple: '#5856D7',
   experience: '#ff6d6a',
-  orange: '#fca000',
+  orange: 'rgb(226, 88, 35)',
+  train: '#fca000',
   car: '#087e8b',
 };

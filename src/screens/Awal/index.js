@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: wp(5),
   },
   containerRow: {
-    paddingTop: hp(2),
+    paddingTop: hp(1),
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: wp(5),

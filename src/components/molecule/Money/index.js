@@ -37,6 +37,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: wp(5),
     backgroundColor: colors.concrete,
-    paddingVertical: hp(2),
+    paddingBottom: hp(1),
   },
 });
