@@ -1,11 +1,29 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {ICChat, ICSearch} from '../../../assets';
+import {ICSearch} from '../../../assets';
 import {colors, hp, wp} from '../../../constants';
 import {ButtonIconOnly} from '../../atoms';
 import Input from '../Input';
 
-const Header = ({onPress, placeholder, iconRight}) => {
+const Header = ({
+  onPress,
+  placeholder,
+  iconRight,
+  iconRight2,
+  paddingRight,
+}) => {
+  const styles = StyleSheet.create({
+    header: {
+      backgroundColor: colors.blue2,
+      height: hp(8),
+      paddingHorizontal: wp(2),
+      paddingRight: paddingRight,
+      justifyContent: 'space-between',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+  });
+
   return (
     <View style={styles.header}>
       <Input
@@ -21,20 +39,9 @@ const Header = ({onPress, placeholder, iconRight}) => {
         onPress={onPress}
       />
       <ButtonIconOnly icon={iconRight} size={10} />
-      <ButtonIconOnly icon={<ICChat />} />
+      {iconRight2 && <ButtonIconOnly icon={iconRight2} />}
     </View>
   );
 };
 
 export default Header;
-
-const styles = StyleSheet.create({
-  header: {
-    backgroundColor: colors.blue2,
-    height: hp(8),
-    paddingHorizontal: wp(2),
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-});

@@ -1,14 +1,4 @@
 import ICEmail from './ICEmail.svg';
-import ICBack from './ICBack.svg';
-import ICCheck from './ICCheck.svg';
-import ICChevron from './ICChevron.svg';
-import ICUser from './ICUser.svg';
-import ICCamera from './ICCamera.svg';
-import ICFolder from './ICFolder.svg';
-import ICCancel from './ICCancel.svg';
-import ICUserMap from './ICUserMap.png';
-import ICLocation from './ICLocation.svg';
-import ICBackBlue from './ICBackBlue.svg';
 import ICAwal from './ICAwal.svg';
 import ICAwalBlue from './ICAwalBlue.svg';
 import ICSimpan from './ICSimpan.svg';
@@ -34,19 +24,11 @@ import ICPlan from './ICPlan.svg';
 import ICPoint from './ICPoint.svg';
 import ICTrain from './ICTrain.svg';
 import ICPayLater from './ICPayLater.svg';
+import ICWallet from './ICWallet.svg';
+import ICVilla from './ICVilla.svg';
 
 export {
   ICEmail,
-  ICBack,
-  ICCheck,
-  ICChevron,
-  ICUser,
-  ICCamera,
-  ICFolder,
-  ICCancel,
-  ICUserMap,
-  ICLocation,
-  ICBackBlue,
   ICAkun,
   ICAwal,
   ICInbox,
@@ -72,4 +54,6 @@ export {
   ICPlan,
   ICPoint,
   ICTrain,
+  ICWallet,
+  ICVilla,
 };

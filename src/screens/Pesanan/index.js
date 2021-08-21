@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {ICReceipt} from '../../assets';
 import {Header} from '../../components';
-import {colors} from '../../constants';
+import {colors, wp} from '../../constants';
 
 export const Pesanan = () => {
   return (
@@ -10,6 +10,7 @@ export const Pesanan = () => {
       <Header
         placeholder={'Cari item, destinasi, fitur...'}
         iconRight={<ICReceipt />}
+        paddingRight={wp(5)}
       />
     </View>
   );

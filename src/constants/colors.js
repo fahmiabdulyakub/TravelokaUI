@@ -4,7 +4,7 @@ export const colors = {
   blue: '#30c5f7',
   blue3: '#0194f3',
   blue2: '#1BA0E2',
-  blue4: ' #235d9f',
+  blue4: '#235d9f',
   dark_blue: '#073E68',
   yello: '#FAD70F',
   alto: '#DCDCDC',

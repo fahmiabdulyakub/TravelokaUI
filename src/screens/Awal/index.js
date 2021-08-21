@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {ICTitik, ICPindai} from '../../assets';
-import {Gap, Header} from '../../components';
+import {ICTitik, ICPindai, ICChat} from '../../assets';
+import {Gap, Header, Menu, Money} from '../../components';
 import {colors, hp, wp} from '../../constants';
 
 export const Awal = ({navigation}) => {
@@ -10,26 +10,26 @@ export const Awal = ({navigation}) => {
       <Header
         placeholder={'Cari item, destinasi, fitur...'}
         iconRight={<ICTitik />}
+        iconRight2={<ICChat />}
         onPress={() => navigation.navigate('Simpan')}
       />
-      <Gap height={hp(2)} />
-      <View style={styles.container}>
-        <View style={styles.containerRow}>
-          <View style={styles.row}>
-            <View style={styles.circle}>
-              <Text>FA</Text>
-            </View>
-            <Gap width={wp(3)} />
-            <Text style={styles.textBold}>Fahmi Abdul Yakub</Text>
+      <View style={styles.containerRow}>
+        <View style={styles.row}>
+          <View style={styles.circle}>
+            <Text>FA</Text>
           </View>
-          <View>
-            <TouchableOpacity>
-              {<ICPindai width={wp(10)} height={wp(10)} />}
-            </TouchableOpacity>
-            <Text style={styles.textSmall}>Pindai</Text>
-          </View>
+          <Gap width={wp(3)} />
+          <Text style={styles.textBold}>Fahmi Abdul Yakub</Text>
+        </View>
+        <View>
+          <TouchableOpacity>
+            {<ICPindai width={wp(10)} height={wp(10)} />}
+          </TouchableOpacity>
+          <Text style={styles.textSmall}>Pindai</Text>
         </View>
       </View>
+      <Money />
+      <Menu />
     </View>
   );
 };
@@ -43,8 +43,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: wp(5),
   },
   containerRow: {
+    paddingTop: hp(2),
     flexDirection: 'row',
     justifyContent: 'space-between',
+    paddingHorizontal: wp(5),
+    backgroundColor: colors.concrete,
   },
   textBold: {
     color: colors.gray,

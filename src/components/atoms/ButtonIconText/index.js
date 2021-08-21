@@ -1,10 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {colors, fonts, hp, wp} from '../../../constants';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {colors, hp, wp} from '../../../constants';
+import Gap from '../Gap';
 
 const ButtonIconText = ({
   title,
-  title1,
   icon,
   iconRight,
   flexDirection,
@@ -12,7 +12,7 @@ const ButtonIconText = ({
   titleColor,
   borderRadius,
   onPress,
-  fontTitle,
+  textAlign,
   paddingVertical,
   paddingHorizontal,
   marginHorizontal,
@@ -20,6 +20,8 @@ const ButtonIconText = ({
   leftText,
   height,
   disabled,
+  shadow,
+  fontWeight,
 }) => {
   return (
     <TouchableOpacity
@@ -31,16 +33,22 @@ const ButtonIconText = ({
         paddingHorizontal,
         marginHorizontal,
         height,
+        shadow,
       )}
       onPress={onPress}
       disabled={disabled}>
       {icon && icon}
-      <View>
-        <Text style={styles.title1}>{title1}</Text>
-        <Text style={styles.title(titleColor, fontTitle, widthText, leftText)}>
-          {title}
-        </Text>
-      </View>
+      <Gap width={wp(1)} />
+      <Text
+        style={styles.title(
+          titleColor,
+          textAlign,
+          widthText,
+          leftText,
+          fontWeight,
+        )}>
+        {title}
+      </Text>
 
       {iconRight && iconRight}
     </TouchableOpacity>
@@ -58,36 +66,37 @@ const styles = StyleSheet.create({
     paddingHorizontal,
     marginHorizontal,
     height,
+    shadow,
   ) => ({
-    backgroundColor: backgroundColor ? backgroundColor : colors.blue,
-    paddingVertical: height ? null : paddingVertical ? paddingVertical : hp(1),
-    paddingHorizontal: paddingHorizontal ? paddingHorizontal : wp(3.6),
+    backgroundColor: backgroundColor ? backgroundColor : colors.white,
+    paddingVertical: height
+      ? null
+      : paddingVertical
+      ? paddingVertical
+      : hp(0.5),
+    paddingHorizontal: paddingHorizontal ? paddingHorizontal : wp(2),
     height: height ? height : null,
-    borderRadius: borderRadius ? borderRadius : 15,
+    borderRadius: borderRadius ? borderRadius : 8,
     flexDirection: flexDirection ? flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     marginHorizontal: marginHorizontal,
-    shadowColor: '#000',
-    shadowOffset: {
+    shadowColor: shadow && '#000',
+    shadowOffset: shadow && {
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
+    shadowOpacity: shadow && 0.25,
+    shadowRadius: shadow && 3.84,
 
-    elevation: 5,
+    elevation: shadow && 5,
   }),
-  title: (titleColor, fontTitle, widthText, leftText) => ({
-    fontFamily: fontTitle ? fontTitle : fonts.MontserratRegular,
+  title: (titleColor, textAlign, widthText, leftText, fontWeight) => ({
     fontSize: hp(1.5),
     color: titleColor ? titleColor : colors.white,
     width: widthText ? widthText : null,
     left: leftText ? leftText : null,
+    fontWeight: fontWeight,
+    textAlign: textAlign,
   }),
-  title1: {
-    fontFamily: fonts.MontserratBold,
-    color: colors.abu,
-    fontSize: hp(1.3),
-  },
 });
