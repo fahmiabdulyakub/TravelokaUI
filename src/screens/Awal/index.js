@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Image,
   ScrollView,
@@ -8,10 +8,12 @@ import {
   View,
 } from 'react-native';
 import {ICTitik, ICPindai, ICChat} from '../../assets';
-import {Button, Gap, Header, Menu, Money} from '../../components';
-import {banner, colors, hp, Kota, wp} from '../../constants';
+import {Button, Card, Gap, Header, Menu, Money} from '../../components';
+import {banner, colors, hotel, hp, kota, wp} from '../../constants';
 
 export const Awal = ({navigation}) => {
+  const [selected_city, setSelectedCity] = useState(kota[0]);
+
   return (
     <View style={styles.page}>
       <Header
@@ -20,53 +22,76 @@ export const Awal = ({navigation}) => {
         iconRight2={<ICChat />}
         onPress={() => navigation.navigate('Simpan')}
       />
-      <View style={styles.containerRow}>
-        <View style={styles.row}>
-          <View style={styles.circle}>
-            <Text>FA</Text>
+      <ScrollView>
+        <View style={styles.containerRow}>
+          <View style={styles.row}>
+            <View style={styles.circle}>
+              <Text>FA</Text>
+            </View>
+            <Gap width={wp(3)} />
+            <Text style={styles.textBold}>Fahmi Abdul Yakub</Text>
           </View>
-          <Gap width={wp(3)} />
-          <Text style={styles.textBold}>Fahmi Abdul Yakub</Text>
+          <View>
+            <TouchableOpacity>
+              {<ICPindai width={wp(10)} height={wp(10)} />}
+            </TouchableOpacity>
+            <Text style={styles.textSmall}>Pindai</Text>
+          </View>
+        </View>
+        <Money />
+        <Menu />
+        <Gap height={hp(3)} />
+        <TouchableOpacity activeOpacity={0.5}>
+          <Image
+            source={{
+              uri: banner.promo,
+            }}
+            style={styles.image}
+          />
+        </TouchableOpacity>
+        <Gap height={hp(3)} />
+        <View style={styles.container}>
+          <Text style={styles.title}>Hotel Pilihan</Text>
+          <Text style={styles.textSmall}>
+            Dapatkan keuntungan menginap di Hotel dengan menunjukkan Sertifikat
+            Vaksinasi
+          </Text>
+        </View>
+        <Gap height={hp(2)} />
+        <View>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <Gap width={wp(1.5)} />
+            {kota.map((item, index) => {
+              return (
+                <Button
+                  key={index}
+                  title={item.name}
+                  buttonColor={
+                    selected_city.id === item.id
+                      ? colors.blue3
+                      : colors.concrete
+                  }
+                  textColor={
+                    selected_city.id === item.id ? colors.white : colors.blue3
+                  }
+                  marginHorizontal={wp(1.5)}
+                  paddingVertical={hp(1)}
+                  onPress={() => setSelectedCity(item)}
+                />
+              );
+            })}
+          </ScrollView>
         </View>
         <View>
-          <TouchableOpacity>
-            {<ICPindai width={wp(10)} height={wp(10)} />}
-          </TouchableOpacity>
-          <Text style={styles.textSmall}>Pindai</Text>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <Gap width={wp(1.5)} />
+            {hotel.map((item, index) => {
+              return <Card key={index} item={item} />;
+            })}
+          </ScrollView>
         </View>
-      </View>
-      <Money />
-      <Menu />
-      <Gap height={hp(3)} />
-      <Image
-        source={{
-          uri: banner.promo,
-        }}
-        style={styles.image}
-      />
-      <Gap height={hp(3)} />
-      <View style={styles.container}>
-        <Text style={styles.title}>Hotel Pilihan</Text>
-        <Text style={styles.textSmall}>
-          Dapatkan keuntungan menginap di Hotel dengan menunjukkan Sertifikat
-          Vaksinasi
-        </Text>
-        <Gap height={hp(1)} />
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          {Kota.map((item, index) => {
-            return (
-              <Button
-                key={index}
-                title={item.name}
-                buttonColor={colors.blue3}
-                textColor={colors.white}
-                marginRight={wp(3)}
-                paddingVertical={hp(1)}
-              />
-            );
-          })}
-        </ScrollView>
-      </View>
+        <Gap height={hp(10)} />
+      </ScrollView>
     </View>
   );
 };
@@ -113,5 +138,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: hp(2.3),
+    fontWeight: '500',
   },
 });

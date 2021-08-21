@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {colors, fonts, hp} from '../../../constants';
+import {colors, hp} from '../../../constants';
 import {
   ICAkun,
   ICAkunBlue,

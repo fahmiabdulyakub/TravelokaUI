@@ -1,15 +1,16 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {colors, fonts, hp, wp} from '../../../constants';
+import {colors, hp, wp} from '../../../constants';
+import {Gap} from '../../atoms';
 
-const Card = ({image, onPress, title}) => {
+const Card = ({item, onPress}) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Image source={{uri: image}} style={styles.image} />
+      <Image source={{uri: item.image}} style={styles.image} />
       <View style={styles.contentText}>
-        <Text numberOfLines={1} style={styles.title}>
-          {title}
-        </Text>
+        <Gap height={hp(1)} />
+        <Text style={styles.title}>{item.name}</Text>
+        <Text style={styles.price}>{item.price}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -19,32 +20,31 @@ export default Card;
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 10,
-    elevation: 5,
+    borderRadius: 5,
     backgroundColor: colors.white,
-    shadowOffset: {width: 1, height: 1},
-    shadowColor: colors.black,
-    shadowOpacity: 0.3,
-    shadowRadius: 2,
     marginHorizontal: 4,
     marginVertical: hp(1.5),
-    width: wp(30),
-    height: hp(20),
+    width: wp(45),
+    height: hp(40),
   },
   image: {
     width: '100%',
-    height: hp(15),
-    borderRadius: 10,
+    height: hp(20),
+    borderRadius: 5,
   },
   contentText: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     paddingHorizontal: 5,
   },
   title: {
-    fontSize: hp(1.6),
-    fontFamily: fonts.MontserratBold,
+    fontSize: hp(1.8),
     textTransform: 'capitalize',
+    fontWeight: '500',
+  },
+  price: {
+    fontSize: hp(1.8),
+    textTransform: 'capitalize',
+    fontWeight: '500',
+    color: colors.orange,
   },
 });
