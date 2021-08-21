@@ -28,7 +28,7 @@ import ICWallet from './ICWallet.svg';
 import ICVilla from './ICVilla.svg';
 import ICFinansial from './ICFinansial.svg';
 import ICAllProduct from './ICAllProduct.svg';
-import ICAntarJemput from './ICAnterJemput.svg';
+import ICAntarJemput from './ICAntarJemput.svg';
 import ICKesehatan from './ICKesehatan.svg';
 import ICAsuransi from './ICAsuransi.svg';
 import ICPulsa from './ICPulsa.svg';

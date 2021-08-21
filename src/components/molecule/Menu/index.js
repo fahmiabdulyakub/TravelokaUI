@@ -2,15 +2,20 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {
   ICAllProduct,
+  ICAntarJemput,
+  ICAsuransi,
   ICBus,
   ICCar,
   ICExperience,
   ICFinansial,
   ICHotel,
   ICJRPass,
+  ICKesehatan,
   ICKuliner,
   ICPlan,
+  ICPulsa,
   ICVilla,
+  ICVoucher,
 } from '../../../assets';
 import {colors, hp, wp} from '../../../constants';
 import {ButtonIconText} from '../../atoms';
@@ -152,6 +157,63 @@ export const Menu = () => {
             <View style={styles.icon(colors.concrete)}>{<ICAllProduct />}</View>
           }
           title={'Semua Produk'}
+          titleColor={colors.grayMuda}
+          width={wp(17)}
+          flexDirection={'column'}
+          textAlign={'center'}
+          widthText={wp(17)}
+          justifyContent={'flex-start'}
+          fontSize={hp(1.2)}
+        />
+      </View>
+      <View style={styles.container_menu}>
+        <ButtonIconText
+          icon={<ICKesehatan width={wp(5)} height={wp(5)} />}
+          title={'Kesehatan'}
+          titleColor={colors.grayMuda}
+          fontSize={hp(1.2)}
+          width={wp(17)}
+          flexDirection={'column'}
+          textAlign={'center'}
+          widthText={wp(16)}
+          justifyContent={'flex-start'}
+        />
+        <ButtonIconText
+          icon={<ICPulsa width={wp(5)} height={wp(5)} />}
+          title={'Pulsa & Paket Internet'}
+          titleColor={colors.grayMuda}
+          width={wp(17)}
+          flexDirection={'column'}
+          textAlign={'center'}
+          widthText={wp(13)}
+          justifyContent={'flex-start'}
+          fontSize={hp(1.2)}
+        />
+        <ButtonIconText
+          icon={<ICAsuransi width={wp(6)} height={wp(6)} />}
+          title={'Asuransi'}
+          titleColor={colors.grayMuda}
+          width={wp(17)}
+          flexDirection={'column'}
+          textAlign={'center'}
+          widthText={wp(17)}
+          justifyContent={'flex-start'}
+          fontSize={hp(1.2)}
+        />
+        <ButtonIconText
+          icon={<ICAntarJemput />}
+          title={'Antar Jemput'}
+          titleColor={colors.grayMuda}
+          width={wp(17)}
+          flexDirection={'column'}
+          textAlign={'center'}
+          widthText={wp(17)}
+          justifyContent={'flex-start'}
+          fontSize={hp(1.2)}
+        />
+        <ButtonIconText
+          icon={<ICVoucher width={wp(5)} height={wp(5)} />}
+          title={'Gift & Voucher'}
           titleColor={colors.grayMuda}
           width={wp(17)}
           flexDirection={'column'}
