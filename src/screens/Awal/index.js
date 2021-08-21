@@ -36,7 +36,7 @@ export const Awal = ({navigation}) => {
 
 const styles = StyleSheet.create({
   page: {
-    backgroundColor: colors.bg.white,
+    backgroundColor: colors.white,
     flex: 1,
   },
   container: {
@@ -47,12 +47,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   textBold: {
-    color: colors.text.gray,
+    color: colors.gray,
     fontSize: hp(2),
     fontWeight: 'bold',
   },
   circle: {
-    backgroundColor: colors.bg.abu,
+    backgroundColor: colors.abu,
     width: wp(10),
     height: wp(10),
     borderRadius: wp(10) / 2,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textSmall: {
-    color: colors.text.grayMuda,
+    color: colors.grayMuda,
     fontSize: hp(1.5),
   },
 });

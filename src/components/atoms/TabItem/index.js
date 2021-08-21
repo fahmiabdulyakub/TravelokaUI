@@ -50,7 +50,7 @@ export default TabItem;
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: colors.bg.white,
+    backgroundColor: colors.white,
     flex: 1,
     paddingVertical: hp(1),
     shadowColor: '#000',
@@ -65,7 +65,6 @@ const styles = StyleSheet.create({
   },
   text: active => ({
     fontSize: hp(1.5),
-    color: active ? colors.text.blue2 : colors.text.grayMuda,
-    fontFamily: fonts.MontserratMedium,
+    color: active ? colors.blue3 : colors.grayMuda,
   }),
 });

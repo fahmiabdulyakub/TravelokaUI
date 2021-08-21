@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     bottom,
   ) => ({
     padding: 5,
-    backgroundColor: buttonColor ? buttonColor : colors.bg.yello,
+    backgroundColor: buttonColor ? buttonColor : colors.yello,
     borderRadius: borderRadius ? borderRadius : 20,
     justifyContent: 'center',
     alignItems: 'center',
@@ -80,6 +80,6 @@ const styles = StyleSheet.create({
   title: (textColor, fontSize, fontFamily) => ({
     fontSize: fontSize ? fontSize : hp(2),
     fontFamily: fontFamily ? fontFamily : fonts.MontserratBold,
-    color: textColor ? textColor : colors.text.blue,
+    color: textColor ? textColor : colors.blue,
   }),
 });

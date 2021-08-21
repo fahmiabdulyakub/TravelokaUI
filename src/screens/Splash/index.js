@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   page_padding: {
-    backgroundColor: colors.bg.blue2,
+    backgroundColor: colors.blue2,
     flex: 1,
     paddingHorizontal: wp(3),
     justifyContent: 'center',

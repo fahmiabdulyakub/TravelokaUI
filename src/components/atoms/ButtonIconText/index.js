@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     marginHorizontal,
     height,
   ) => ({
-    backgroundColor: backgroundColor ? backgroundColor : colors.bg.blue,
+    backgroundColor: backgroundColor ? backgroundColor : colors.blue,
     paddingVertical: height ? null : paddingVertical ? paddingVertical : hp(1),
     paddingHorizontal: paddingHorizontal ? paddingHorizontal : wp(3.6),
     height: height ? height : null,
@@ -81,13 +81,13 @@ const styles = StyleSheet.create({
   title: (titleColor, fontTitle, widthText, leftText) => ({
     fontFamily: fontTitle ? fontTitle : fonts.MontserratRegular,
     fontSize: hp(1.5),
-    color: titleColor ? titleColor : colors.text.white,
+    color: titleColor ? titleColor : colors.white,
     width: widthText ? widthText : null,
     left: leftText ? leftText : null,
   }),
   title1: {
     fontFamily: fonts.MontserratBold,
-    color: colors.text.abu,
+    color: colors.abu,
     fontSize: hp(1.3),
   },
 });

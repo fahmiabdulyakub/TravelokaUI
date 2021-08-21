@@ -33,7 +33,7 @@ const ModalOption = ({
       <View style={styles.container}>
         {loading ? (
           <View style={styles.loading}>
-            <ActivityIndicator size="large" color={colors.bg.blue} />
+            <ActivityIndicator size="large" color={colors.blue} />
           </View>
         ) : (
           <FlatList
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   container: {
-    backgroundColor: colors.bg.white,
+    backgroundColor: colors.white,
     borderRadius: wp(5),
     width: wp(80),
     justifyContent: 'center',
@@ -72,14 +72,14 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingVertical: hp(1),
-    backgroundColor: colors.bg.white,
-    borderBottomColor: colors.bg.abu,
+    backgroundColor: colors.white,
+    borderBottomColor: colors.abu,
     borderBottomWidth: wp(0.3),
   },
   titleSelect: {
     fontFamily: fonts.MontserratRegular,
     fontSize: hp(2),
-    color: colors.text.gray,
+    color: colors.gray,
   },
   loading: {
     alignItems: 'center',

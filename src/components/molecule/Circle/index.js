@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     width: wp(10),
     height: wp(10),
     borderRadius: wp(10) / 2,
-    backgroundColor: colors.bg.green,
+    backgroundColor: colors.green,
     alignItems: 'center',
     justifyContent: 'center',
     shadowColor: '#000',

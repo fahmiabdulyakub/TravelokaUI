@@ -44,7 +44,7 @@ export const Routes = () => {
   return (
     <NavigationContainer>
       <SafeAreaView style={styles.SafeAreaView}>
-        <StatusBar backgroundColor={colors.bg.blue2} />
+        <StatusBar backgroundColor={colors.blue2} />
         <Stack.Navigator initialRouteName="Splash">
           <Stack.Screen
             name="MainApp"

@@ -21,9 +21,9 @@ const styles = StyleSheet.create({
   container: {
     borderRadius: 10,
     elevation: 5,
-    backgroundColor: colors.bg.white,
+    backgroundColor: colors.white,
     shadowOffset: {width: 1, height: 1},
-    shadowColor: colors.bg.black,
+    shadowColor: colors.black,
     shadowOpacity: 0.3,
     shadowRadius: 2,
     marginHorizontal: 4,

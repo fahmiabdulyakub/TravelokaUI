@@ -39,7 +39,7 @@ const Input = ({
           placeholder={placeholder}
           value={value}
           onChangeText={onChangeText}
-          placeholderTextColor={colors.text.grayMuda}
+          placeholderTextColor={colors.grayMuda}
           keyboardType={keyboardType}
           multiline={multiline}
           numberOfLines={5}
@@ -65,7 +65,7 @@ const Input = ({
         placeholder={placeholder}
         value={value}
         onChangeText={onChangeText}
-        placeholderTextColor={colors.text.grayMuda}
+        placeholderTextColor={colors.grayMuda}
         keyboardType={keyboardType}
         multiline={multiline}
         numberOfLines={5}
@@ -95,12 +95,12 @@ const styles = StyleSheet.create({
   }),
   input: (colorText, fontSize, widthInput) => ({
     fontSize: fontSize ? fontSize : hp(2),
-    color: colorText ? colorText : colors.text.placeholder,
+    color: colorText ? colorText : colors.placeholder,
     width: widthInput,
   }),
   lengthText: {
     fontSize: hp(1.5),
-    color: colors.text.silver,
+    color: colors.silver,
     top: hp(1),
   },
 });

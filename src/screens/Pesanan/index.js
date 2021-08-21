@@ -17,7 +17,7 @@ export const Pesanan = () => {
 
 const styles = StyleSheet.create({
   page: {
-    backgroundColor: colors.bg.white,
+    backgroundColor: colors.white,
     flex: 1,
   },
 });

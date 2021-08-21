@@ -9,9 +9,9 @@ const Header = ({onPress, placeholder, iconRight}) => {
   return (
     <View style={styles.header}>
       <Input
-        colorText={colors.text.grayMuda}
+        colorText={colors.grayMuda}
         paddingHorizontal={wp(3)}
-        backgroundColor={colors.bg.white}
+        backgroundColor={colors.white}
         placeholder={placeholder}
         fontSize={hp(1.5)}
         borderRadius={wp(1)}
@@ -29,7 +29,7 @@ export default Header;
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: colors.bg.blue2,
+    backgroundColor: colors.blue2,
     height: hp(8),
     paddingHorizontal: wp(5),
     justifyContent: 'space-between',
