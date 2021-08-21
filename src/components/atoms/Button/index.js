@@ -19,6 +19,7 @@ const Button = ({
   marginHorizontal,
   bottom,
   marginRight,
+  shadow,
 }) => {
   return (
     <TouchableOpacity
@@ -32,6 +33,7 @@ const Button = ({
         marginHorizontal,
         bottom,
         marginRight,
+        shadow,
       )}
       onPress={onPress}
       disabled={disabled}>
@@ -58,31 +60,33 @@ const styles = StyleSheet.create({
     marginHorizontal,
     bottom,
     marginRight,
+    shadow,
   ) => ({
     padding: 5,
     backgroundColor: buttonColor ? buttonColor : colors.yello,
     borderRadius: borderRadius ? borderRadius : 5,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: paddingHorizontal ? paddingHorizontal : wp(3),
+    paddingHorizontal: paddingHorizontal ? paddingHorizontal : wp(4),
     marginHorizontal: marginHorizontal,
     borderWidth: borderWidth,
     borderColor: borderColor,
     paddingVertical: paddingVertical,
     bottom: bottom,
-    shadowColor: '#000',
-    shadowOffset: {
+    shadowColor: shadow && '#000',
+    shadowOffset: shadow && {
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.23,
+    shadowOpacity: shadow && 0.23,
     shadowRadius: 2.62,
 
-    elevation: 4,
+    elevation: shadow && 4,
     marginRight: marginRight,
   }),
   title: (textColor, fontSize) => ({
     fontSize: fontSize ? fontSize : hp(1.8),
     color: textColor ? textColor : colors.blue,
+    fontWeight: '500',
   }),
 });

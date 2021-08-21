@@ -61,6 +61,7 @@ export const Awal = ({navigation}) => {
                 buttonColor={colors.blue3}
                 textColor={colors.white}
                 marginRight={wp(3)}
+                paddingVertical={hp(1)}
               />
             );
           })}
