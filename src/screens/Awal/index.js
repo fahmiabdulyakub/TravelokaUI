@@ -1,8 +1,15 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {ICTitik, ICPindai, ICChat} from '../../assets';
-import {Gap, Header, Menu, Money} from '../../components';
-import {colors, hp, wp} from '../../constants';
+import {Button, Gap, Header, Menu, Money} from '../../components';
+import {banner, colors, hp, Kota, wp} from '../../constants';
 
 export const Awal = ({navigation}) => {
   return (
@@ -30,6 +37,35 @@ export const Awal = ({navigation}) => {
       </View>
       <Money />
       <Menu />
+      <Gap height={hp(3)} />
+      <Image
+        source={{
+          uri: banner.promo,
+        }}
+        style={styles.image}
+      />
+      <Gap height={hp(3)} />
+      <View style={styles.container}>
+        <Text style={styles.title}>Hotel Pilihan</Text>
+        <Text style={styles.textSmall}>
+          Dapatkan keuntungan menginap di Hotel dengan menunjukkan Sertifikat
+          Vaksinasi
+        </Text>
+        <Gap height={hp(1)} />
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          {Kota.map((item, index) => {
+            return (
+              <Button
+                key={index}
+                title={item.name}
+                buttonColor={colors.blue3}
+                textColor={colors.white}
+                marginRight={wp(3)}
+              />
+            );
+          })}
+        </ScrollView>
+      </View>
     </View>
   );
 };
@@ -40,7 +76,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   container: {
-    paddingHorizontal: wp(5),
+    paddingHorizontal: wp(3),
   },
   containerRow: {
     paddingTop: hp(1),
@@ -69,5 +105,12 @@ const styles = StyleSheet.create({
   textSmall: {
     color: colors.grayMuda,
     fontSize: hp(1.5),
+  },
+  image: {
+    width: wp(100),
+    height: hp(5),
+  },
+  title: {
+    fontSize: hp(2.3),
   },
 });

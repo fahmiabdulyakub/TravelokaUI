@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {colors, fonts, hp} from '../../../constants';
+import {colors, hp, wp} from '../../../constants';
 
 const Button = ({
   title,
@@ -18,6 +18,7 @@ const Button = ({
   numberOfLines,
   marginHorizontal,
   bottom,
+  marginRight,
 }) => {
   return (
     <TouchableOpacity
@@ -30,11 +31,12 @@ const Button = ({
         borderRadius,
         marginHorizontal,
         bottom,
+        marginRight,
       )}
       onPress={onPress}
       disabled={disabled}>
       <Text
-        style={styles.title(textColor, fontSize, fontFamily)}
+        style={styles.title(textColor, fontSize)}
         ellipsizeMode={'tail'}
         numberOfLines={numberOfLines ? numberOfLines : null}>
         {title}
@@ -55,13 +57,14 @@ const styles = StyleSheet.create({
     borderRadius,
     marginHorizontal,
     bottom,
+    marginRight,
   ) => ({
     padding: 5,
     backgroundColor: buttonColor ? buttonColor : colors.yello,
-    borderRadius: borderRadius ? borderRadius : 20,
+    borderRadius: borderRadius ? borderRadius : 5,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: paddingHorizontal ? paddingHorizontal : 5,
+    paddingHorizontal: paddingHorizontal ? paddingHorizontal : wp(3),
     marginHorizontal: marginHorizontal,
     borderWidth: borderWidth,
     borderColor: borderColor,
@@ -76,10 +79,10 @@ const styles = StyleSheet.create({
     shadowRadius: 2.62,
 
     elevation: 4,
+    marginRight: marginRight,
   }),
-  title: (textColor, fontSize, fontFamily) => ({
-    fontSize: fontSize ? fontSize : hp(2),
-    fontFamily: fontFamily ? fontFamily : fonts.MontserratBold,
+  title: (textColor, fontSize) => ({
+    fontSize: fontSize ? fontSize : hp(1.8),
     color: textColor ? textColor : colors.blue,
   }),
 });
