@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {ICSearch} from '../../../assets';
+import {ICChat, ICSearch} from '../../../assets';
 import {colors, hp, wp} from '../../../constants';
 import {ButtonIconOnly} from '../../atoms';
 import Input from '../Input';
@@ -20,7 +20,8 @@ const Header = ({onPress, placeholder, iconRight}) => {
         widthInput={wp(70)}
         onPress={onPress}
       />
-      <ButtonIconOnly icon={iconRight} />
+      <ButtonIconOnly icon={iconRight} size={10} />
+      <ButtonIconOnly icon={<ICChat />} />
     </View>
   );
 };
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: colors.blue2,
     height: hp(8),
-    paddingHorizontal: wp(5),
+    paddingHorizontal: wp(2),
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',

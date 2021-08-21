@@ -23,6 +23,18 @@ import ICTitik from './ICTitik.svg';
 import ICSearch from './ICSearch.svg';
 import ICReceipt from './ICReceipt.svg';
 import ICPindai from './ICPindai.svg';
+import ICBus from './ICBus.svg';
+import ICCar from './ICCar.svg';
+import ICChat from './ICChat.svg';
+import ICExperience from './ICExperience.svg';
+import ICHotel from './ICHotel.svg';
+import ICJRPass from './ICJRPass.svg';
+import ICKuliner from './ICKuliner.svg';
+import ICPlan from './ICPlan.svg';
+import ICPoint from './ICPoint.svg';
+import ICTrain from './ICTrain.svg';
+import ICPayLater from './ICPayLater.svg';
+
 export {
   ICEmail,
   ICBack,
@@ -49,4 +61,15 @@ export {
   ICSearch,
   ICReceipt,
   ICPindai,
+  ICBus,
+  ICCar,
+  ICChat,
+  ICExperience,
+  ICHotel,
+  ICJRPass,
+  ICKuliner,
+  ICPayLater,
+  ICPlan,
+  ICPoint,
+  ICTrain,
 };

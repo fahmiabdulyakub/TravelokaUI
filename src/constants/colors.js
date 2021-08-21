@@ -5,6 +5,7 @@ export const colors = {
   blue3: '#0194f3',
   blue2: '#1BA0E2',
   blue4: ' #235d9f',
+  dark_blue: '#073E68',
   yello: '#FAD70F',
   alto: '#DCDCDC',
   silver: '#BDBDBD',
@@ -19,4 +20,6 @@ export const colors = {
   grayMuda: '#687176',
   purple: '#5856D7',
   experience: '#ff6d6a',
+  orange: '#fca000',
+  car: '#087e8b',
 };
